@@ -21,7 +21,7 @@ async function getPostsInfos() {
         `
         console.log(post);
     } catch (error) {
-        console.error("Error on getting data: ", error);
+        console.error("Error on getting data details: ", error);
     }
 }
 

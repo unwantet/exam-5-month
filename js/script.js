@@ -28,27 +28,37 @@ async function fetchData(){
                 card.appendChild(btn);
                 main.appendChild(card);
                 btn.addEventListener('click', () => {
-                    card.remove();
-                    console.log(post.id);
-                    axios.delete(`${URL}/post/${post.id}`, {
-                        headers: { "app-id": appID }
-                    })                    
+                    try {     
+                        card.remove();
+                        console.log(post.id);
+                        axios.delete(`${URL}/post/${post.id}`, {
+                            headers: { "app-id": appID }
+                        })                    
+                    } catch (error) {
+                        console.error("Error on deleting data: ", error);
+                    } 
                 })
             })
+
             
             
+            window.addEventListener('load', function(){
+                var loader = document.querySelector('.loader');    
+                loader.style.display = 'none';
+            });
             
             console.log(postDB);
-
-    } catch (error) {
-    console.error("Error on getting data: ", error);        
+            
+        } catch (error) {
+            console.error("Error on getting data: ", error);        
+        }
+        
     }
     
-}
-
-fetchData();
-
-btn.addEventListener('click', () => {
-    alert("hello")
-})
-
+    fetchData();
+    
+    btn.addEventListener('click', () => {
+        alert("hello")
+    })
+    
+    
