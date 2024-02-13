@@ -18,7 +18,7 @@ async function fetchData(){
         const postDB = response.data.data;
         postDB.forEach(post => {
             const  card = document.createElement('div');
-            card.classList.add ('rounded-xl','overflow-hidden','card', )
+            card.classList.add ('rounded-xl','overflow-hidden','card','border' )
             checkTxt = post.text.length > 50 ? post.text.substring(0, 50) + "..." : post.text;
             const btn = document.createElement('button');
             btn.classList.add('text-white-500', 'rounded-lg', 'border', 'bg-red-300', 'font-semibold','ml-4','mb-4','p-2' );
