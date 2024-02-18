@@ -8,7 +8,10 @@ body{
     background: linear-gradient( rgba(255,255,255,1) 8%, rgba(198,198,198,1) 30%, rgba(201,201,201,1) 75%, rgba(255,255,255,1) 93%);
 
 }
+.card{
+    box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
 
+}
 .post-card{
     box-shadow: 0px 0px 35px 0px rgba(255, 0, 11, 0.2);
 }

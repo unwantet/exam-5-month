@@ -1,4 +1,4 @@
-const URL = 'https://dummyapi.io/data/v1'
+const URL = 'https://dummyapi.io/dat.a/v1'
 const appID = '65cb8b38369c97421205d106'
 const main = document.getElementById('main')
 const gif = 'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXhoYmV3b3pteHRsZTZwY3hvNHhqNWwxcjkyZmg4MnM2dngxOG02dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/53QGAMuHBOI8BkRUTk/giphy.gif'
@@ -30,10 +30,11 @@ async function fetchData(){
             <p class="text-zinc-400	">${post.owner.firstName}  ${post.owner.lastName}</p>
             <a href="more-post.html?id=${post.id}" class="text-pink-500">Show more..</a>
             </div>
-            `                
+            `               
             card.appendChild(btn);
             main.appendChild(card);
             btn.addEventListener('click', () => {
+                
                 try {     
                     card.remove();
                     console.log(post.id);
